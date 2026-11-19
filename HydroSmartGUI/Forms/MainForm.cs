@@ -74,7 +74,9 @@ namespace HydroSmart.Forms
             HalamanBase dashboard = new DashboardPage(_l);
             TambahNav(nav, "Dashboard", dashboard);
             TambahNav(nav, "1. Kelola Tanaman", new TanamanPage(_l));
-            TambahNav(nav, "2. Analisis Penyakit", new AnalisisPage(_l));
+            TambahNav(nav, "2. Monitoring Nutrisi", new MonitoringPage(_l));
+            TambahNav(nav, "3. Analisis Penyakit", new AnalisisPage(_l));
+            TambahNav(nav, "4. Pengingat Perawatan", new PengingatPage(_l));
 
             sidebar.Controls.Add(nav);
             sidebar.Controls.Add(header);

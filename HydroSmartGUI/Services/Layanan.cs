@@ -6,12 +6,16 @@ namespace HydroSmart.Services
         public TanamanService Tanaman { get; private set; }
         public AnalisisService Analisis { get; private set; }
         public AuthService Auth { get; private set; }
+        public PerawatanService Perawatan { get; private set; }
+        public NutrisiService Nutrisi { get; private set; }
 
         public Layanan()
         {
             Tanaman = new TanamanService();
             Analisis = new AnalisisService();
             Auth = new AuthService();
+            Perawatan = new PerawatanService();
+            Nutrisi = new NutrisiService();
         }
     }
 }
