@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <RootNamespace>HydroSmart</RootNamespace>
+    <AssemblyName>HydroSmart</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="Forms\DashboardPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Forms\TanamanPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Forms\AnalisisPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Forms\HalamanBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
