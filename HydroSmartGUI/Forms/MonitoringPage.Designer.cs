@@ -24,7 +24,7 @@ namespace HydroSmart.Forms
 
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             _lblJudul = new Label();
             _lblTanaman = new Label();
             _lblIdeal = new Label();
@@ -55,9 +55,7 @@ namespace HydroSmart.Forms
             _hasil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_grid).BeginInit();
             SuspendLayout();
-            // 
-            // _lblJudul
-            // 
+   
             _lblJudul.Font = new Font("Segoe UI Semibold", 18F);
             _lblJudul.ForeColor = Color.FromArgb(27, 94, 32);
             _lblJudul.Location = new Point(24, 3);
@@ -66,9 +64,7 @@ namespace HydroSmart.Forms
             _lblJudul.TabIndex = 14;
             _lblJudul.Text = "Monitoring Nutrisi";
             _lblJudul.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // _lblTanaman
-            // 
+     
             _lblTanaman.AutoSize = true;
             _lblTanaman.Font = new Font("Segoe UI Semibold", 10F);
             _lblTanaman.ForeColor = Color.FromArgb(84, 110, 122);
@@ -77,9 +73,7 @@ namespace HydroSmart.Forms
             _lblTanaman.Size = new Size(93, 28);
             _lblTanaman.TabIndex = 13;
             _lblTanaman.Text = "Tanaman";
-            // 
-            // _lblIdeal
-            // 
+      
             _lblIdeal.AutoSize = true;
             _lblIdeal.Font = new Font("Segoe UI Semibold", 10F);
             _lblIdeal.ForeColor = Color.FromArgb(84, 110, 122);
@@ -89,9 +83,7 @@ namespace HydroSmart.Forms
             _lblIdeal.TabIndex = 12;
             _lblIdeal.Text = "Kebutuhan ideal";
             _lblIdeal.Click += _lblIdeal_Click;
-            // 
-            // _lblPh
-            // 
+       
             _lblPh.AutoSize = true;
             _lblPh.Font = new Font("Segoe UI Semibold", 10F);
             _lblPh.ForeColor = Color.FromArgb(84, 110, 122);
@@ -101,9 +93,7 @@ namespace HydroSmart.Forms
             _lblPh.TabIndex = 11;
             _lblPh.Text = "pH larutan";
             _lblPh.Click += _lblPh_Click;
-            // 
-            // _lblTds
-            // 
+           
             _lblTds.AutoSize = true;
             _lblTds.Font = new Font("Segoe UI Semibold", 10F);
             _lblTds.ForeColor = Color.FromArgb(84, 110, 122);
@@ -113,9 +103,7 @@ namespace HydroSmart.Forms
             _lblTds.TabIndex = 10;
             _lblTds.Text = "TDS (ppm)";
             _lblTds.Click += _lblTds_Click;
-            // 
-            // _lblSuhu
-            // 
+    
             _lblSuhu.AutoSize = true;
             _lblSuhu.Font = new Font("Segoe UI Semibold", 10F);
             _lblSuhu.ForeColor = Color.FromArgb(84, 110, 122);
@@ -125,9 +113,7 @@ namespace HydroSmart.Forms
             _lblSuhu.TabIndex = 9;
             _lblSuhu.Text = "Suhu air (C)";
             _lblSuhu.Click += _lblSuhu_Click;
-            // 
-            // _lblHasil
-            // 
+      
             _lblHasil.AutoSize = true;
             _lblHasil.Font = new Font("Segoe UI Semibold", 11F);
             _lblHasil.ForeColor = Color.FromArgb(84, 110, 122);
@@ -136,18 +122,14 @@ namespace HydroSmart.Forms
             _lblHasil.Size = new Size(145, 30);
             _lblHasil.TabIndex = 0;
             _lblHasil.Text = "Hasil Evaluasi";
-            // 
-            // _cmbTanaman
-            // 
+     
             _cmbTanaman.DropDownStyle = ComboBoxStyle.DropDownList;
             _cmbTanaman.FormattingEnabled = true;
             _cmbTanaman.Location = new Point(24, 92);
             _cmbTanaman.Name = "_cmbTanaman";
             _cmbTanaman.Size = new Size(343, 36);
             _cmbTanaman.TabIndex = 1;
-            // 
-            // _numPh
-            // 
+      
             _numPh.DecimalPlaces = 1;
             _numPh.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
             _numPh.Location = new Point(24, 164);
@@ -157,18 +139,14 @@ namespace HydroSmart.Forms
             _numPh.TabIndex = 2;
             _numPh.Value = new decimal(new int[] { 60, 0, 0, 65536 });
             _numPh.ValueChanged += _numPh_ValueChanged;
-            // 
-            // _numTds
-            // 
+       
             _numTds.Location = new Point(142, 164);
             _numTds.Maximum = new decimal(new int[] { 5000, 0, 0, 0 });
             _numTds.Name = "_numTds";
             _numTds.Size = new Size(100, 34);
             _numTds.TabIndex = 3;
             _numTds.Value = new decimal(new int[] { 700, 0, 0, 0 });
-            // 
-            // _numSuhu
-            // 
+      
             _numSuhu.DecimalPlaces = 1;
             _numSuhu.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
             _numSuhu.Location = new Point(267, 164);
@@ -178,9 +156,7 @@ namespace HydroSmart.Forms
             _numSuhu.TabIndex = 4;
             _numSuhu.Value = new decimal(new int[] { 240, 0, 0, 65536 });
             _numSuhu.ValueChanged += _numSuhu_ValueChanged;
-            // 
-            // _btnSimpan
-            // 
+     
             _btnSimpan.BackColor = Color.FromArgb(46, 125, 50);
             _btnSimpan.Cursor = Cursors.Hand;
             _btnSimpan.FlatAppearance.BorderSize = 0;
@@ -194,9 +170,7 @@ namespace HydroSmart.Forms
             _btnSimpan.Text = "Simpan dan Evaluasi";
             _btnSimpan.UseVisualStyleBackColor = false;
             _btnSimpan.Click += Simpan_Click;
-            // 
-            // _btnHapus
-            // 
+       
             _btnHapus.BackColor = Color.FromArgb(198, 40, 40);
             _btnHapus.Cursor = Cursors.Hand;
             _btnHapus.FlatAppearance.BorderSize = 0;
@@ -210,9 +184,7 @@ namespace HydroSmart.Forms
             _btnHapus.Text = "Hapus Catatan";
             _btnHapus.UseVisualStyleBackColor = false;
             _btnHapus.Click += Hapus_Click;
-            // 
-            // _hasil
-            // 
+       
             _hasil.BackColor = Color.FromArgb(247, 251, 247);
             _hasil.Controls.Add(_lblRingkas);
             _hasil.Location = new Point(444, 85);
@@ -220,31 +192,27 @@ namespace HydroSmart.Forms
             _hasil.Size = new Size(430, 130);
             _hasil.TabIndex = 7;
             _hasil.Paint += _hasil_Paint;
-            // 
-            // _lblRingkas
-            // 
+        
             _lblRingkas.Location = new Point(20, 40);
             _lblRingkas.Name = "_lblRingkas";
-            _lblRingkas.Size = new Size(390, 55);
+            _lblRingkas.Size = new Size(386, 73);
             _lblRingkas.TabIndex = 1;
             _lblRingkas.Text = "Isi pengukuran lalu klik tombol Simpan dan Evaluasi.";
-            // 
-            // _grid
-            // 
+        
             _grid.AllowUserToAddRows = false;
             _grid.AllowUserToDeleteRows = false;
             _grid.AllowUserToResizeRows = false;
             _grid.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             _grid.BackgroundColor = Color.White;
-            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = Color.FromArgb(46, 125, 50);
-            dataGridViewCellStyle10.Font = new Font("Segoe UI", 10F);
-            dataGridViewCellStyle10.ForeColor = Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = Color.FromArgb(46, 125, 50);
-            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
-            _grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(46, 125, 50);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10F);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(46, 125, 50);
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            _grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             _grid.ColumnHeadersHeight = 30;
             _grid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             _grid.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7, dataGridViewTextBoxColumn8 });
@@ -259,65 +227,47 @@ namespace HydroSmart.Forms
             _grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             _grid.Size = new Size(850, 180);
             _grid.TabIndex = 8;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
+        
             dataGridViewTextBoxColumn1.HeaderText = "ID";
             dataGridViewTextBoxColumn1.MinimumWidth = 6;
             dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
+        
             dataGridViewTextBoxColumn2.HeaderText = "Waktu";
             dataGridViewTextBoxColumn2.MinimumWidth = 6;
             dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
+         
             dataGridViewTextBoxColumn3.HeaderText = "pH";
             dataGridViewTextBoxColumn3.MinimumWidth = 6;
             dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
+          
             dataGridViewTextBoxColumn4.HeaderText = "TDS (ppm)";
             dataGridViewTextBoxColumn4.MinimumWidth = 6;
             dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
+       
             dataGridViewTextBoxColumn5.HeaderText = "Suhu (C)";
             dataGridViewTextBoxColumn5.MinimumWidth = 6;
             dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
+       
             dataGridViewTextBoxColumn6.HeaderText = "Status pH";
             dataGridViewTextBoxColumn6.MinimumWidth = 6;
             dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
+           
             dataGridViewTextBoxColumn7.HeaderText = "Status TDS";
             dataGridViewTextBoxColumn7.MinimumWidth = 6;
             dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
+           
             dataGridViewTextBoxColumn8.HeaderText = "Status Suhu";
             dataGridViewTextBoxColumn8.MinimumWidth = 6;
             dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // MonitoringPage
-            // 
+          
             BackColor = Color.FromArgb(244, 248, 244);
             Controls.Add(_lblHasil);
             Controls.Add(_grid);
