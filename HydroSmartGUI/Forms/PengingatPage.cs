@@ -123,5 +123,10 @@ namespace HydroSmart.Forms
             L.Perawatan.Hapus(id);
             MuatGrid();
         }
+
+        private void PengingatPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
