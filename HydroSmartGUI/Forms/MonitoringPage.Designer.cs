@@ -23,28 +23,28 @@ namespace HydroSmart.Forms
             // 
             _cmbTanaman.Location = new Point(0, 0);
             _cmbTanaman.Name = "_cmbTanaman";
-            _cmbTanaman.Size = new Size(121, 36);
+            _cmbTanaman.Size = new Size(121, 31);
             _cmbTanaman.TabIndex = 2;
             // 
             // _numPh
             // 
             _numPh.Location = new Point(0, 0);
             _numPh.Name = "_numPh";
-            _numPh.Size = new Size(120, 34);
+            _numPh.Size = new Size(120, 30);
             _numPh.TabIndex = 7;
             // 
             // _numTds
             // 
             _numTds.Location = new Point(0, 0);
             _numTds.Name = "_numTds";
-            _numTds.Size = new Size(120, 34);
+            _numTds.Size = new Size(120, 30);
             _numTds.TabIndex = 8;
             // 
             // _numSuhu
             // 
             _numSuhu.Location = new Point(0, 0);
             _numSuhu.Name = "_numSuhu";
-            _numSuhu.Size = new Size(120, 34);
+            _numSuhu.Size = new Size(120, 30);
             _numSuhu.TabIndex = 9;
             // 
             // _hasil
@@ -76,9 +76,7 @@ namespace HydroSmart.Forms
             ((System.ComponentModel.ISupportInitialize)_numTds).EndInit();
             ((System.ComponentModel.ISupportInitialize)_numSuhu).EndInit();
             _hasil.ResumeLayout(false);
-            _hasil.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
     }
 }
