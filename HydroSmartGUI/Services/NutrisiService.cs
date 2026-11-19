@@ -33,6 +33,13 @@ namespace HydroSmart.Services
             return c;
         }
 
+        public bool Hapus(int id)
+        {
+            CatatanNutrisi catatan = _data.Find(c => c.Id == id);
+            if (catatan == null) return false;
+            return _data.Remove(catatan);
+        }
+
         public bool HapusSemua()
         {
             if (_data.Count == 0) return false;

@@ -49,6 +49,8 @@ namespace HydroSmart.Forms
                 return;
             }
 
+            if (!Tanya("Yakin ingin menyimpan hasil monitoring nutrisi ini?")) return;
+
             CatatanNutrisi c = L.Nutrisi.Tambah(tanaman.Nama,
                 (double)_numPh.Value, (int)_numTds.Value, (double)_numSuhu.Value,
                 tanaman.PhMin, tanaman.PhMax, tanaman.TdsMin, tanaman.TdsMax);
@@ -60,13 +62,51 @@ namespace HydroSmart.Forms
 
         private void Hapus_Click(object sender, EventArgs e)
         {
-            if (!Tanya("Hapus seluruh catatan nutrisi?")) return;
-            L.Nutrisi.HapusSemua();
+            int id = IdTerpilih(_grid);
+            if (id < 0)
+            {
+                Peringatan("Pilih dulu catatan nutrisi yang ingin dihapus.");
+                return;
+            }
+
+            if (!Tanya("Yakin hapus catatan nutrisi yang dipilih?")) return;
+
+            L.Nutrisi.Hapus(id);
             _lblRingkas.Text = "Isi pengukuran lalu klik tombol Simpan dan Evaluasi.";
             MuatGrid();
         }
 
         private void _hasil_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void _lblPh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void _numSuhu_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void _lblTds_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void _lblSuhu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void _lblIdeal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void _numPh_ValueChanged(object sender, EventArgs e)
         {
 
         }
