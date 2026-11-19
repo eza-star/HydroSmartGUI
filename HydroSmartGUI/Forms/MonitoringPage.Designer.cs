@@ -7,70 +7,76 @@ namespace HydroSmart.Forms
     {
         private void InitializeComponent()
         {
+            _cmbTanaman = new ComboBox();
+            _numPh = new NumericUpDown();
+            _numTds = new NumericUpDown();
+            _numSuhu = new NumericUpDown();
+            _hasil = new Panel();
+            _lblRingkas = new Label();
+            ((System.ComponentModel.ISupportInitialize)_numPh).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)_numTds).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)_numSuhu).BeginInit();
+            _hasil.SuspendLayout();
             SuspendLayout();
-
-            BackColor = Tema.Latar;
-            Font = Tema.FontNormal;
-
-            Label judul = Tema.Judul("Monitoring Nutrisi");
-            judul.Location = new Point(24, 18);
-
-            _cmbTanaman = new ComboBox { Location = new Point(24, 92), Size = new Size(330, 27) };
-
-            _numPh = new NumericUpDown { Location = new Point(24, 155), Size = new Size(100, 27), DecimalPlaces = 1, Minimum = 0, Maximum = 14, Increment = 0.1M };
-            _numTds = new NumericUpDown { Location = new Point(132, 155), Size = new Size(100, 27), Minimum = 0, Maximum = 5000 };
-            _numSuhu = new NumericUpDown { Location = new Point(240, 155), Size = new Size(100, 27), DecimalPlaces = 1, Minimum = 0, Maximum = 60, Increment = 0.1M, Value = 24 };
-
-            Controls.Add(judul);
-            Controls.Add(Tema.Lbl("Tanaman", 24, 70));
+            // 
+            // _cmbTanaman
+            // 
+            _cmbTanaman.Location = new Point(0, 0);
+            _cmbTanaman.Name = "_cmbTanaman";
+            _cmbTanaman.Size = new Size(121, 36);
+            _cmbTanaman.TabIndex = 2;
+            // 
+            // _numPh
+            // 
+            _numPh.Location = new Point(0, 0);
+            _numPh.Name = "_numPh";
+            _numPh.Size = new Size(120, 34);
+            _numPh.TabIndex = 7;
+            // 
+            // _numTds
+            // 
+            _numTds.Location = new Point(0, 0);
+            _numTds.Name = "_numTds";
+            _numTds.Size = new Size(120, 34);
+            _numTds.TabIndex = 8;
+            // 
+            // _numSuhu
+            // 
+            _numSuhu.Location = new Point(0, 0);
+            _numSuhu.Name = "_numSuhu";
+            _numSuhu.Size = new Size(120, 34);
+            _numSuhu.TabIndex = 9;
+            // 
+            // _hasil
+            // 
+            _hasil.Controls.Add(_lblRingkas);
+            _hasil.Location = new Point(0, 0);
+            _hasil.Name = "_hasil";
+            _hasil.Size = new Size(200, 100);
+            _hasil.TabIndex = 12;
+            // 
+            // _lblRingkas
+            // 
+            _lblRingkas.Location = new Point(0, 0);
+            _lblRingkas.Name = "_lblRingkas";
+            _lblRingkas.Size = new Size(100, 23);
+            _lblRingkas.TabIndex = 1;
+            // 
+            // MonitoringPage
+            // 
+            BackColor = Color.FromArgb(244, 248, 244);
             Controls.Add(_cmbTanaman);
-            Controls.Add(Tema.Lbl("Kebutuhan ideal", 24, 125));
-            Controls.Add(Tema.Lbl("pH larutan", 24, 180));
-            Controls.Add(Tema.Lbl("TDS (ppm)", 132, 180));
-            Controls.Add(Tema.Lbl("Suhu air (C)", 240, 180));
             Controls.Add(_numPh);
             Controls.Add(_numTds);
             Controls.Add(_numSuhu);
-
-            Button simpan = Tema.Tombol("Simpan dan Evaluasi", Tema.Hijau, 24, 220, 180);
-            Button hapus = Tema.Tombol("Hapus Catatan", Tema.Merah, 212, 220, 150);
-            Controls.Add(simpan);
-            Controls.Add(hapus);
-
-            _hasil = new Panel
-            {
-                Location = new Point(420, 85),
-                Size = new Size(430, 130),
-                BackColor = Color.FromArgb(247, 251, 247)
-            };
-            Label lblHasil = Tema.Lbl("Hasil Evaluasi", 20, 18);
-            lblHasil.Font = new Font("Segoe UI Semibold", 11F);
-            _lblRingkas = new Label
-            {
-                Location = new Point(20, 55),
-                Size = new Size(390, 55),
-                Text = "Isi pengukuran lalu klik tombol Simpan dan Evaluasi."
-            };
-            _hasil.Controls.Add(lblHasil);
-            _hasil.Controls.Add(_lblRingkas);
             Controls.Add(_hasil);
-
-            _grid = Tema.Grid();
-            _grid.Location = new Point(24, 290);
-            _grid.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _grid.Size = new Size(850, 180);
-            _grid.Columns.Add("Id", "ID");
-            _grid.Columns.Add("Waktu", "Waktu");
-            _grid.Columns.Add("Ph", "pH");
-            _grid.Columns.Add("Tds", "TDS (ppm)");
-            _grid.Columns.Add("Suhu", "Suhu (C)");
-            _grid.Columns.Add("StatusPh", "Status pH");
-            _grid.Columns.Add("StatusTds", "Status TDS");
-            _grid.Columns.Add("StatusSuhu", "Status Suhu");
-            Controls.Add(_grid);
-
             Name = "MonitoringPage";
-            Size = new Size(940, 470);
+            Size = new Size(1233, 540);
+            ((System.ComponentModel.ISupportInitialize)_numPh).EndInit();
+            ((System.ComponentModel.ISupportInitialize)_numTds).EndInit();
+            ((System.ComponentModel.ISupportInitialize)_numSuhu).EndInit();
+            _hasil.ResumeLayout(false);
+            _hasil.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
