@@ -33,36 +33,20 @@ namespace HydroSmart.Forms
         public LoginForm(AuthService auth)
         {
             _auth = auth;
-            InitializeComponent();
-
-            txtUser = textBox1;
-            txtPass = textBox2;
-            chkLihat = checkBox1;
-            btnLogin = button1;
-
-            txtPass.UseSystemPasswordChar = true;
-            chkLihat.CheckedChanged += delegate { txtPass.UseSystemPasswordChar = !chkLihat.Checked; };
-            btnLogin.Click += BtnLogin_Click;
-
-            lblError = new Label();
-            lblError.Left = 314;
-            lblError.Top = 270;
-            lblError.Width = 243;
-            lblError.Height = 20;
-            lblError.ForeColor = Color.Firebrick;
-            Controls.Add(lblError);
-
-            AcceptButton = btnLogin;
+            Bangun();
         }
+
+
 
         private void Bangun()
         {
             Text = "HydroSmart - Login";
             ClientSize = new Size(760, 460);
             StartPosition = FormStartPosition.CenterScreen;
-            FormBorderStyle = FormBorderStyle.FixedDialog;
-            MaximizeBox = false;
-            MinimizeBox = false;
+            FormBorderStyle = FormBorderStyle.Sizable;
+            MaximizeBox = true;
+            MinimizeBox = true;
+            MinimumSize = new Size(760, 460);
             BackColor = Color.White;
             Font = Tema.FontNormal;
 
@@ -179,7 +163,7 @@ namespace HydroSmart.Forms
             label1.AutoSize = true;
             label1.Location = new Point(157, 145);
             label1.Name = "label1";
-            label1.Size = new Size(0, 20);
+            label1.Size = new Size(0, 25);
             label1.TabIndex = 0;
             // 
             // panel1
@@ -207,7 +191,7 @@ namespace HydroSmart.Forms
             label2.ForeColor = Color.ForestGreen;
             label2.Location = new Point(314, 57);
             label2.Name = "label2";
-            label2.Size = new Size(184, 31);
+            label2.Size = new Size(227, 37);
             label2.TabIndex = 3;
             label2.Text = "Selamat Datang";
             label2.Click += label2_Click;
@@ -219,7 +203,7 @@ namespace HydroSmart.Forms
             label3.ForeColor = Color.ForestGreen;
             label3.Location = new Point(314, 99);
             label3.Name = "label3";
-            label3.Size = new Size(230, 20);
+            label3.Size = new Size(280, 24);
             label3.TabIndex = 4;
             label3.Text = "Silakan login untuk melanjutkan";
             label3.Click += label3_Click;
@@ -231,7 +215,7 @@ namespace HydroSmart.Forms
             label4.ForeColor = Color.Black;
             label4.Location = new Point(317, 145);
             label4.Name = "label4";
-            label4.Size = new Size(79, 20);
+            label4.Size = new Size(95, 24);
             label4.TabIndex = 5;
             label4.Text = "Username";
             label4.Click += label4_Click;
@@ -243,7 +227,7 @@ namespace HydroSmart.Forms
             label5.ForeColor = Color.Black;
             label5.Location = new Point(314, 198);
             label5.Name = "label5";
-            label5.Size = new Size(74, 20);
+            label5.Size = new Size(88, 24);
             label5.TabIndex = 6;
             label5.Text = "Password";
             label5.Click += label5_Click;
@@ -252,7 +236,7 @@ namespace HydroSmart.Forms
             // 
             textBox1.Location = new Point(317, 168);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(243, 27);
+            textBox1.Size = new Size(243, 31);
             textBox1.TabIndex = 7;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
@@ -260,7 +244,7 @@ namespace HydroSmart.Forms
             // 
             textBox2.Location = new Point(314, 221);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(243, 27);
+            textBox2.Size = new Size(243, 31);
             textBox2.TabIndex = 8;
             // 
             // checkBox1
@@ -268,7 +252,7 @@ namespace HydroSmart.Forms
             checkBox1.AutoSize = true;
             checkBox1.Location = new Point(317, 254);
             checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(165, 24);
+            checkBox1.Size = new Size(199, 29);
             checkBox1.TabIndex = 9;
             checkBox1.Text = "Tampilkan password";
             checkBox1.UseVisualStyleBackColor = true;
@@ -286,7 +270,7 @@ namespace HydroSmart.Forms
             // 
             // LoginForm
             // 
-            ClientSize = new Size(572, 400);
+            ClientSize = new Size(1473, 674);
             Controls.Add(button1);
             Controls.Add(checkBox1);
             Controls.Add(textBox2);
