@@ -14,6 +14,7 @@ namespace HydroSmart.Forms
         {
             InitializeComponent();
             cmbJenis.SelectedIndex = 0;
+            cmbLokasi.SelectedIndex = 0;
         }
 
         public override void Muat()
@@ -41,7 +42,7 @@ namespace HydroSmart.Forms
             cmbJenis.Enabled = true;
             cmbJenis.SelectedIndex = 0;
             txtNama.Clear();
-            txtLokasi.Clear();
+            cmbLokasi.SelectedIndex = 0;
             dtpTanggal.Value = DateTime.Today;
             dgvTanaman.ClearSelection();
             dgvTanaman.CurrentCell = null;
@@ -58,18 +59,18 @@ namespace HydroSmart.Forms
             cmbJenis.SelectedItem = t.Jenis;
             cmbJenis.Enabled = false;      // jenis tidak bisa diubah setelah dibuat
             txtNama.Text = t.Nama;
-            txtLokasi.Text = t.Lokasi;
+            cmbLokasi.SelectedItem = t.Lokasi;
             dtpTanggal.Value = t.TanggalTanam;
         }
 
         private void BtnTambah_Click(object sender, EventArgs e)
         {
-            if (txtNama.Text.Trim() == "" || txtLokasi.Text.Trim() == "")
+            if (txtNama.Text.Trim() == "" || cmbLokasi.SelectedIndex < 0)
             {
                 Peringatan("Nama dan lokasi wajib diisi.");
                 return;
             }
-            Tanaman t = TanamanService.Buat(cmbJenis.SelectedIndex + 1, txtNama.Text, txtLokasi.Text.Trim(), dtpTanggal.Value.Date);
+            Tanaman t = TanamanService.Buat(cmbJenis.SelectedIndex + 1, txtNama.Text, cmbLokasi.SelectedItem.ToString(), dtpTanggal.Value.Date);
             L.Tanaman.Tambah(t);
             Muat();
             KosongkanForm();
@@ -89,7 +90,7 @@ namespace HydroSmart.Forms
             try
             {
                 t.Nama = txtNama.Text;
-                t.Lokasi = txtLokasi.Text.Trim();
+                t.Lokasi = cmbLokasi.SelectedItem.ToString();
                 t.TanggalTanam = dtpTanggal.Value.Date;
             }
             catch (ArgumentException ex)
@@ -118,6 +119,11 @@ namespace HydroSmart.Forms
             L.Tanaman.Hapus(id);
             Muat();
             KosongkanForm();
+        }
+
+        private void lblNama_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
